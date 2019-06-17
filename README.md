@@ -51,7 +51,7 @@
 
 How to run multiple sites in nginx.
 
-1. create folder in /var/www/example.com/html
+1. create folder in /var/www/example.com/html  and add html files
     
     sudo chown -R $USER:$USER /var/www/example.com/html
 
@@ -61,7 +61,7 @@ How to run multiple sites in nginx.
 3. Changes in the new conf
    1. remove default server from default conf.
    
-          listen 80 default_server;
+          listen 80 <del>default_server;
           
    2. set alias
       
@@ -73,11 +73,13 @@ How to run multiple sites in nginx.
 
 4. Add symbolic links
     
-    sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
+       sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
 
 5. uncomment hashbucket in nginx.conf
 
-    sudo nano /etc/nginx/nginx.conf
+       sudo nano /etc/nginx/nginx.conf
 
 
-sudo systemctl restart nginx
+6. Restart 
+          
+       sudo systemctl restart nginx
