@@ -61,7 +61,7 @@ How to run multiple sites in nginx.
 3. Changes in the new conf
    1. remove default server from default conf.
    
-          listen 80 <del>default_server;
+        listen 80 <del>default_server;
           
    2. set alias
       
